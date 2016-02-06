@@ -1,0 +1,27 @@
+server:
+  port: 9999
+
+#Spring Data
+spring:
+  data:
+    # MongoDB configuration
+    mongodb:
+      host: localhost
+      port: 27017
+      database: lsnbox_test
+
+# OAUTH2 Configuration
+authentication:
+    oauth:
+        clientid: lsnboxApp
+        secret: lsnboxAppSecreat
+        # Token is valid 30 minutes
+        tokenValidityInSeconds: 1800
+
+#Logging
+logging:
+  level:
+    co.lsnbox: DEBUG
+    org.springframework:
+      security: DEBUG
+      web: DEBUG
